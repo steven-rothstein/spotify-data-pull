@@ -1,0 +1,19 @@
+@import url("pandoc_css_static_toc.css");
+
+@media screen and (min-width: 1500px) {
+    #TOC {
+        position: fixed;
+
+        /* ensures links are clickable */
+        z-index: -1;
+
+        top: 0em;
+        left: 0em;
+        width: 100%;
+        height: 100%;
+
+        font-size: .6em;
+        margin-left: 1em;
+        margin-top: 3.5em;
+    }
+}

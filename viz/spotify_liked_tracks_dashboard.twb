@@ -1,0 +1,2178 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.SingleValuePerNestSorting.true...SingleValuePerNestSorting />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='worksheet'>
+      <format attr='font-size' value='7' />
+    </style-rule>
+    <style-rule element='title'>
+      <format attr='font-size' value='12' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='tracks_with_artist_details' inline='true' name='federated.15gk27a1nf043816zxtk30tngp8d' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='track_details_output' name='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw'>
+            <connection class='textscan' directory='C:/Users/srothstei2/Downloads/SR' filename='track_details_output.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[track_details_output.csv].[track_id]' />
+              <expression op='[track_artists_output.csv].[track_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_details_output.csv' table='[track_details_output#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ssZZZZZ' name='added_at' ordinal='0' />
+              <column datatype='string' name='album' ordinal='1' />
+              <column datatype='string' name='artists' ordinal='2' />
+              <column datatype='string' name='available_markets' ordinal='3' />
+              <column datatype='integer' name='disc_number' ordinal='4' />
+              <column datatype='integer' name='duration_ms' ordinal='5' />
+              <column datatype='boolean' name='explicit' ordinal='6' />
+              <column datatype='string' name='external_ids' ordinal='7' />
+              <column datatype='string' name='external_urls' ordinal='8' />
+              <column datatype='string' name='href' ordinal='9' />
+              <column datatype='string' name='track_id' ordinal='10' />
+              <column datatype='boolean' name='is_local' ordinal='11' />
+              <column datatype='string' name='name' ordinal='12' />
+              <column datatype='integer' name='popularity' ordinal='13' />
+              <column datatype='string' name='preview_url' ordinal='14' />
+              <column datatype='integer' name='track_number' ordinal='15' />
+              <column datatype='string' name='type' ordinal='16' />
+              <column datatype='string' name='uri' ordinal='17' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_artists_output.csv' table='[track_artists_output#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='track_id' ordinal='0' />
+              <column datatype='string' name='external_urls' ordinal='1' />
+              <column datatype='string' name='href' ordinal='2' />
+              <column datatype='string' name='id' ordinal='3' />
+              <column datatype='string' name='name' ordinal='4' />
+              <column datatype='string' name='type' ordinal='5' />
+              <column datatype='string' name='uri' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[track_details_output.csv].[track_id]' />
+              <expression op='[track_artists_output.csv].[track_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_details_output.csv' table='[track_details_output#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ssZZZZZ' name='added_at' ordinal='0' />
+              <column datatype='string' name='album' ordinal='1' />
+              <column datatype='string' name='artists' ordinal='2' />
+              <column datatype='string' name='available_markets' ordinal='3' />
+              <column datatype='integer' name='disc_number' ordinal='4' />
+              <column datatype='integer' name='duration_ms' ordinal='5' />
+              <column datatype='boolean' name='explicit' ordinal='6' />
+              <column datatype='string' name='external_ids' ordinal='7' />
+              <column datatype='string' name='external_urls' ordinal='8' />
+              <column datatype='string' name='href' ordinal='9' />
+              <column datatype='string' name='track_id' ordinal='10' />
+              <column datatype='boolean' name='is_local' ordinal='11' />
+              <column datatype='string' name='name' ordinal='12' />
+              <column datatype='integer' name='popularity' ordinal='13' />
+              <column datatype='string' name='preview_url' ordinal='14' />
+              <column datatype='integer' name='track_number' ordinal='15' />
+              <column datatype='string' name='type' ordinal='16' />
+              <column datatype='string' name='uri' ordinal='17' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_artists_output.csv' table='[track_artists_output#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='track_id' ordinal='0' />
+              <column datatype='string' name='external_urls' ordinal='1' />
+              <column datatype='string' name='href' ordinal='2' />
+              <column datatype='string' name='id' ordinal='3' />
+              <column datatype='string' name='name' ordinal='4' />
+              <column datatype='string' name='type' ordinal='5' />
+              <column datatype='string' name='uri' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[added_at]' value='[track_details_output.csv].[added_at]' />
+          <map key='[album]' value='[track_details_output.csv].[album]' />
+          <map key='[artists]' value='[track_details_output.csv].[artists]' />
+          <map key='[available_markets]' value='[track_details_output.csv].[available_markets]' />
+          <map key='[disc_number]' value='[track_details_output.csv].[disc_number]' />
+          <map key='[duration_ms]' value='[track_details_output.csv].[duration_ms]' />
+          <map key='[explicit]' value='[track_details_output.csv].[explicit]' />
+          <map key='[external_ids]' value='[track_details_output.csv].[external_ids]' />
+          <map key='[external_urls (track_artists_output.csv)]' value='[track_artists_output.csv].[external_urls]' />
+          <map key='[external_urls]' value='[track_details_output.csv].[external_urls]' />
+          <map key='[href (track_artists_output.csv)]' value='[track_artists_output.csv].[href]' />
+          <map key='[href]' value='[track_details_output.csv].[href]' />
+          <map key='[id]' value='[track_artists_output.csv].[id]' />
+          <map key='[is_local]' value='[track_details_output.csv].[is_local]' />
+          <map key='[name (track_artists_output.csv)]' value='[track_artists_output.csv].[name]' />
+          <map key='[name]' value='[track_details_output.csv].[name]' />
+          <map key='[popularity]' value='[track_details_output.csv].[popularity]' />
+          <map key='[preview_url]' value='[track_details_output.csv].[preview_url]' />
+          <map key='[track_id (track_artists_output.csv)]' value='[track_artists_output.csv].[track_id]' />
+          <map key='[track_id]' value='[track_details_output.csv].[track_id]' />
+          <map key='[track_number]' value='[track_details_output.csv].[track_number]' />
+          <map key='[type (track_artists_output.csv)]' value='[track_artists_output.csv].[type]' />
+          <map key='[type]' value='[track_details_output.csv].[type]' />
+          <map key='[uri (track_artists_output.csv)]' value='[track_artists_output.csv].[uri]' />
+          <map key='[uri]' value='[track_details_output.csv].[uri]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>added_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[added_at]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>added_at</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>album</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[album]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>album</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artists</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artists]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>artists</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available_markets</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[available_markets]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>available_markets</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disc_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[disc_number]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>disc_number</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_ms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_ms]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>duration_ms</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>explicit</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[explicit]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>explicit</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>external_ids</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[external_ids]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>external_ids</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>external_urls</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[external_urls]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>external_urls</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>href</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[href]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>href</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[track_id]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>track_id</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_local</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_local]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>is_local</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>preview_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[preview_url]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>preview_url</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[track_number]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>track_number</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uri]</local-name>
+            <parent-name>[track_details_output.csv]</parent-name>
+            <remote-alias>uri</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[track_id (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>track_id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>external_urls</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[external_urls (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>external_urls</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>href</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[href (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>href</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uri</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[uri (track_artists_output.csv)]</local-name>
+            <parent-name>[track_artists_output.csv]</parent-name>
+            <remote-alias>uri</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='1' datatype='integer' name='[Calculation_162692575082807296]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Day Added' datatype='date' default-format='*yyyy-mm-dd' name='[Calculation_508062374279319552]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE([added_at])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='track_details_output.csv' datatype='table' name='[__tableau_internal_object_id__].[track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378]' role='measure' type='quantitative' />
+      <column caption='Added At' datatype='datetime' name='[added_at]' role='dimension' type='ordinal' />
+      <column caption='Album' datatype='string' name='[album]' role='dimension' type='nominal' />
+      <column caption='Artists' datatype='string' name='[artists]' role='dimension' type='nominal' />
+      <column caption='Available Markets' datatype='string' name='[available_markets]' role='dimension' type='nominal' />
+      <column caption='Disc Number' datatype='integer' name='[disc_number]' role='dimension' type='ordinal' />
+      <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+      <column caption='Explicit' datatype='boolean' name='[explicit]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='Non-Explicit' />
+          <alias key='true' value='Explicit' />
+        </aliases>
+      </column>
+      <column caption='External Ids' datatype='string' name='[external_ids]' role='dimension' type='nominal' />
+      <column caption='External Urls (Track Artists Output.Csv)' datatype='string' name='[external_urls (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='External Urls' datatype='string' name='[external_urls]' role='dimension' type='nominal' />
+      <column caption='Href (Track Artists Output.Csv)' datatype='string' name='[href (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='Href' datatype='string' name='[href]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Is Local' datatype='boolean' name='[is_local]' role='dimension' type='nominal' />
+      <column caption='Artist Name' datatype='string' name='[name (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='Track Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Popularity' datatype='integer' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Preview Url' datatype='string' name='[preview_url]' role='dimension' type='nominal' />
+      <column caption='Track Id (Track Artists Output.Csv)' datatype='string' name='[track_id (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+      <column caption='Track Number' datatype='integer' name='[track_number]' role='dimension' type='ordinal' />
+      <column caption='Type (Track Artists Output.Csv)' datatype='string' name='[type (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <column caption='Uri (Track Artists Output.Csv)' datatype='string' name='[uri (track_artists_output.csv)]' role='dimension' type='nominal' />
+      <column caption='Uri' datatype='string' name='[uri]' role='dimension' type='nominal' />
+      <column-instance column='[explicit]' derivation='None' name='[none:explicit:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Artist Name)' hidden='true' name='[Action (Artist Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name (track_artists_output.csv)]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:explicit:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='track_details_output.csv' id='track_details_output.csv_AF2E3EBB425A46FB9ADFDCE9FD680378'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[track_details_output.csv].[track_id]' />
+                    <expression op='[track_artists_output.csv].[track_id]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_details_output.csv' table='[track_details_output#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ssZZZZZ' name='added_at' ordinal='0' />
+                    <column datatype='string' name='album' ordinal='1' />
+                    <column datatype='string' name='artists' ordinal='2' />
+                    <column datatype='string' name='available_markets' ordinal='3' />
+                    <column datatype='integer' name='disc_number' ordinal='4' />
+                    <column datatype='integer' name='duration_ms' ordinal='5' />
+                    <column datatype='boolean' name='explicit' ordinal='6' />
+                    <column datatype='string' name='external_ids' ordinal='7' />
+                    <column datatype='string' name='external_urls' ordinal='8' />
+                    <column datatype='string' name='href' ordinal='9' />
+                    <column datatype='string' name='track_id' ordinal='10' />
+                    <column datatype='boolean' name='is_local' ordinal='11' />
+                    <column datatype='string' name='name' ordinal='12' />
+                    <column datatype='integer' name='popularity' ordinal='13' />
+                    <column datatype='string' name='preview_url' ordinal='14' />
+                    <column datatype='integer' name='track_number' ordinal='15' />
+                    <column datatype='string' name='type' ordinal='16' />
+                    <column datatype='string' name='uri' ordinal='17' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.0qe4kad1fjc6ov1cw43hl1kgy5yw' name='track_artists_output.csv' table='[track_artists_output#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='string' name='track_id' ordinal='0' />
+                    <column datatype='string' name='external_urls' ordinal='1' />
+                    <column datatype='string' name='href' ordinal='2' />
+                    <column datatype='string' name='id' ordinal='3' />
+                    <column datatype='string' name='name' ordinal='4' />
+                    <column datatype='string' name='type' ordinal='5' />
+                    <column datatype='string' name='uri' ordinal='6' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_AA0D9FF876C8482C9800F6994A5924A2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Interactive - Track Totals' type='sheet' worksheet='Artists by Track Count' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Interactive - Track Totals' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Artists by Track Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column caption='Day Added' datatype='date' default-format='*yyyy-mm-dd' name='[Calculation_508062374279319552]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE([added_at])' />
+            </column>
+            <column caption='Added At' datatype='datetime' name='[added_at]' role='dimension' type='ordinal' />
+            <column-instance column='[track_id (track_artists_output.csv)]' derivation='CountD' name='[ctd:track_id (track_artists_output.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_508062374279319552]' derivation='Max' name='[max:Calculation_508062374279319552:qk]' pivot='key' type='quantitative' />
+            <column caption='Artist Name' datatype='string' name='[name (track_artists_output.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[name (track_artists_output.csv)]' derivation='None' name='[none:name (track_artists_output.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Track Id (Track Artists Output.Csv)' datatype='string' name='[track_id (track_artists_output.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' included-values='all' />
+          <filter class='quantitative' column='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' included-values='all' />
+          <filter class='categorical' column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:name (track_artists_output.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]</column>
+            <column>[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]</column>
+            <column>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+            <encoding attr='color' field='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' palette='tableau-map-temperatur' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' value='Color Legend - Last Date Artist&apos;s Track Added'>
+              <formatted-text>
+                <run>Color Legend - Last Date Artist&apos;s Track Added</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='title' field='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' value='Last Added Date'>
+              <formatted-text>
+                <run>Last Added Date</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' value='Artists&apos; Track Count'>
+              <formatted-text>
+                <run>Artists&apos; Track Count</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' />
+              <color column='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]>]]></run>
+                <run><![CDATA[
+<[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]> songs
+Last song added on <[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9F3417C8-600A-411D-8F7A-623140E63B6A}' />
+    </worksheet>
+    <worksheet name='Bars - Artists by Track Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Artists by Track Count</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column-instance column='[track_id (track_artists_output.csv)]' derivation='CountD' name='[ctd:track_id (track_artists_output.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='Artist Name' datatype='string' name='[name (track_artists_output.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[name (track_artists_output.csv)]' derivation='None' name='[none:name (track_artists_output.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Track Id (Track Artists Output.Csv)' datatype='string' name='[track_id (track_artists_output.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' scope='cols' value='Track Count' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='90' />
+            <format attr='cell-h' value='30' />
+            <format attr='cell' value='30' />
+            <format attr='cell-q' value='150' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]</rows>
+        <cols>[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{3EDE9F02-3B3E-4FDE-8B5E-5D6E3855F66E}' />
+    </worksheet>
+    <worksheet name='Explicit Tracks'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column caption='1' datatype='integer' name='[Calculation_162692575082807296]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='&quot;Explicit Track Breakdown&quot;' datatype='string' name='[Calculation_162692575083847682]' role='dimension' type='nominal' user:unnamed='Sheet 3'>
+              <calculation class='tableau' formula='&quot;Explicit Track Breakdown&quot;' />
+            </column>
+            <column-instance column='[track_id]' derivation='CountD' name='[ctd:track_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Explicit' datatype='boolean' name='[explicit]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='false' value='Non-Explicit' />
+                <alias key='true' value='Explicit' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_162692575082807296]' derivation='Min' name='[min:Calculation_162692575082807296:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_162692575083847682]' derivation='None' name='[none:Calculation_162692575083847682:nk]' pivot='key' type='nominal' />
+            <column-instance column='[explicit]' derivation='None' name='[none:explicit:nk]' pivot='key' type='nominal' />
+            <column-instance column='[track_id]' derivation='CountD' name='[pcto:ctd:track_id:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk]' scope='rows' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='456' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <customized-label>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]>]]></run>
+                <run><![CDATA[
+<[federated.15gk27a1nf043816zxtk30tngp8d].[pcto:ctd:track_id:qk]>
+<[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id:qk]> songs]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='357' />
+                <format attr='maxheight' value='357' />
+                <format attr='minwidth' value='456' />
+                <format attr='maxwidth' value='456' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]' />
+              <wedge-size column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id:qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[pcto:ctd:track_id:qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'><![CDATA[<[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]>]]></run>
+                <run><![CDATA[
+<[federated.15gk27a1nf043816zxtk30tngp8d].[pcto:ctd:track_id:qk]>
+<[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id:qk]> tracks]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_162692575083847682:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.75762432813644409' />
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk] + [federated.15gk27a1nf043816zxtk30tngp8d].[min:Calculation_162692575082807296:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FD4886B7-1A7B-405D-9F9E-E504AB1EC45D}' />
+    </worksheet>
+    <worksheet name='Heatmap - Time Tracks Added'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column caption='LOOKUP(ZN(COUNTD([Track Id])), 0)' datatype='integer' name='[Calculation_366198983257526276]' role='measure' type='quantitative' user:unnamed='Sheet 4'>
+              <calculation class='tableau' formula='LOOKUP(ZN(COUNTD([track_id])), 0)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Added At' datatype='datetime' name='[added_at]' role='dimension' type='ordinal' />
+            <column-instance column='[added_at]' derivation='Hour' name='[hr:added_at:ok]' pivot='key' type='ordinal' />
+            <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_366198983257526276]' derivation='User' name='[usr:Calculation_366198983257526276:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[added_at]' derivation='Weekday' name='[wd:added_at:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.15gk27a1nf043816zxtk30tngp8d].[wd:added_at:ok]' value='88' />
+            <format attr='height' field='[federated.15gk27a1nf043816zxtk30tngp8d].[hr:added_at:ok]' value='25' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-width' value='3' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.15gk27a1nf043816zxtk30tngp8d].[hr:added_at:ok]' value='48' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.15gk27a1nf043816zxtk30tngp8d].[hr:added_at:ok]' value='right' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15gk27a1nf043816zxtk30tngp8d].[usr:Calculation_366198983257526276:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' value='1' />
+            <format attr='border-style' data-class='subtotal' value='solid' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.15gk27a1nf043816zxtk30tngp8d].[usr:Calculation_366198983257526276:qk]' />
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[usr:Calculation_366198983257526276:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15gk27a1nf043816zxtk30tngp8d].[hr:added_at:ok]</rows>
+        <cols>[federated.15gk27a1nf043816zxtk30tngp8d].[wd:added_at:ok]</cols>
+        <show-full-range>
+          <column>[federated.15gk27a1nf043816zxtk30tngp8d].[added_at]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{8236153E-CB22-442A-940D-FC02F24E3195}' />
+    </worksheet>
+    <worksheet name='Running Total - Liked Songs'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column caption='Added At' datatype='datetime' name='[added_at]' role='dimension' type='ordinal' />
+            <column-instance column='[track_id]' derivation='CountD' name='[cum:ctd:track_id:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[added_at]' derivation='Max' name='[max:added_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[added_at]' derivation='Day-Trunc' name='[tdy:added_at:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15gk27a1nf043816zxtk30tngp8d].[cum:ctd:track_id:qk]' scope='rows' value='Running Sum of Track Count' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15gk27a1nf043816zxtk30tngp8d].[tdy:added_at:qk]' value='*yyyy-mm-dd' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[cum:ctd:track_id:qk]' />
+            </encodings>
+            <label-data column='[federated.15gk27a1nf043816zxtk30tngp8d].[max:added_at:qk]' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='most-recent' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15gk27a1nf043816zxtk30tngp8d].[cum:ctd:track_id:qk]</rows>
+        <cols>[federated.15gk27a1nf043816zxtk30tngp8d].[tdy:added_at:qk]</cols>
+      </table>
+      <simple-id uuid='{706338C5-7773-4E9B-8444-B74EA90878C2}' />
+    </worksheet>
+    <worksheet name='Track Listing'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+            <column caption='Day Added' datatype='date' default-format='*yyyy-mm-dd' name='[Calculation_508062374279319552]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE([added_at])' />
+            </column>
+            <column caption='Added At' datatype='datetime' name='[added_at]' role='dimension' type='ordinal' />
+            <column-instance column='[track_id]' derivation='CountD' name='[ctd:track_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Artist Name' datatype='string' name='[name (track_artists_output.csv)]' role='dimension' type='nominal' />
+            <column caption='Track Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_508062374279319552]' derivation='None' name='[none:Calculation_508062374279319552:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[added_at]' derivation='None' name='[none:added_at:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[name (track_artists_output.csv)]' derivation='None' name='[none:name (track_artists_output.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15gk27a1nf043816zxtk30tngp8d].[Action (Artist Name)]'>
+            <groupfilter function='level-members' level='[name (track_artists_output.csv)]' user:ui-action-filter='[Action1_AA0D9FF876C8482C9800F6994A5924A2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:name (track_artists_output.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' direction='DESC' using='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id:qk]' />
+          <_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_508062374279319552:ok]' direction='DESC' measure-to-sort-by='[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_508062374279319552:ok]' shelf='rows' />
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.15gk27a1nf043816zxtk30tngp8d].[none:added_at:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15gk27a1nf043816zxtk30tngp8d].[none:added_at:ok]' shelf='rows' />
+          </_.fcp.SingleValuePerNestSorting.true...single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.15gk27a1nf043816zxtk30tngp8d].[Action (Artist Name)]</column>
+            <column>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name:nk]' value='444' />
+            <format attr='width' field='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' value='248' />
+            <format attr='width' field='[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_508062374279319552:ok]' value='108' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.15gk27a1nf043816zxtk30tngp8d].[none:added_at:ok]' value='false' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name:nk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk] / ([federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_508062374279319552:ok] / [federated.15gk27a1nf043816zxtk30tngp8d].[none:added_at:ok]))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{EE7BC696-8A22-4279-AF9A-8294EBBB9FF5}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Heatmap and Explicit Tracks'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98352' id='7' param='horz' type-v2='layout-flow' w='99034' x='483' y='824'>
+            <zone h='98352' id='5' type-v2='layout-basic' w='99034' x='483' y='824'>
+              <zone h='98352' id='3' name='Explicit Tracks' show-title='false' w='34079' x='483' y='824'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98352' id='9' name='Heatmap - Time Tracks Added' w='64955' x='34562' y='824'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='91' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='90' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='98352' id='3' is-fixed='true' name='Explicit Tracks' show-title='false' w='34079' x='483' y='824'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98352' id='9' is-fixed='true' name='Heatmap - Time Tracks Added' w='64955' x='34562' y='824'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2752B589-126C-462F-990D-9CB354AC9CBD}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Interactive - Track Totals'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='tracks_with_artist_details' name='federated.15gk27a1nf043816zxtk30tngp8d' />
+      </datasources>
+      <datasource-dependencies datasource='federated.15gk27a1nf043816zxtk30tngp8d'>
+        <column caption='Day Added' datatype='date' default-format='*yyyy-mm-dd' name='[Calculation_508062374279319552]' role='dimension' type='ordinal'>
+          <calculation class='tableau' formula='DATE([added_at])' />
+        </column>
+        <column-instance column='[track_id (track_artists_output.csv)]' derivation='CountD' name='[ctd:track_id (track_artists_output.csv):qk]' pivot='key' type='quantitative' />
+        <column-instance column='[Calculation_508062374279319552]' derivation='Max' name='[max:Calculation_508062374279319552:qk]' pivot='key' type='quantitative' />
+        <column caption='Artist Name' datatype='string' name='[name (track_artists_output.csv)]' role='dimension' type='nominal' />
+        <column-instance column='[name (track_artists_output.csv)]' derivation='None' name='[none:name (track_artists_output.csv):nk]' pivot='key' type='nominal' />
+        <column caption='Track Id (Track Artists Output.Csv)' datatype='string' name='[track_id (track_artists_output.csv)]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='8' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98370' id='11' param='horz' type-v2='layout-flow' w='99152' x='424' y='815'>
+            <zone h='98370' id='9' type-v2='layout-basic' w='85222' x='424' y='815'>
+              <zone h='49185' id='7' name='Artists by Track Count' w='85222' x='424' y='815'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49185' id='14' name='Track Listing' w='85222' x='424' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='263' h='98370' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='13930' x='85646' y='815'>
+              <zone h='7033' id='12' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' values='relevant' w='13930' x='85646' y='815'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7033' id='28' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' type-v2='filter' values='relevant' w='13930' x='85646' y='7848'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5810' id='47' mode='checkdropdown' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' type-v2='filter' values='relevant' w='13930' x='85646' y='14881'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6625' id='144' name='Artists by Track Count' pane-specification-id='0' param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' type-v2='color' w='13930' x='85646' y='20691'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='150' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98370' id='149' param='vert' type-v2='layout-flow' w='99152' x='424' y='815'>
+                <zone h='7033' id='12' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' values='relevant' w='13930' x='85646' y='815'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7033' id='28' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' type-v2='filter' values='relevant' w='13930' x='85646' y='7848'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5810' id='47' mode='checkdropdown' name='Artists by Track Count' param='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' type-v2='filter' values='relevant' w='13930' x='85646' y='14881'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49185' id='7' is-fixed='true' name='Artists by Track Count' w='85222' x='424' y='815'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6625' id='144' name='Artists by Track Count' pane-specification-id='0' param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' type-v2='color' w='13930' x='85646' y='20691'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49185' id='14' is-fixed='true' name='Track Listing' w='85222' x='424' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{16692ADA-437A-4408-B0B2-660BE997BDD1}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Track Totals'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98370' id='8' param='horz' type-v2='layout-flow' w='99034' x='483' y='815'>
+            <zone h='98370' id='6' type-v2='layout-basic' w='99034' x='483' y='815'>
+              <zone h='98370' id='3' name='Running Total - Liked Songs' w='49517' x='483' y='815'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98370' id='5' name='Bars - Artists by Track Count' w='49517' x='50000' y='815'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='186' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98370' id='185' param='vert' type-v2='layout-flow' w='99034' x='483' y='815'>
+                <zone fixed-size='280' h='98370' id='3' is-fixed='true' name='Running Total - Liked Songs' w='49517' x='483' y='815'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98370' id='5' is-fixed='true' name='Bars - Artists by Track Count' w='49517' x='50000' y='815'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8913EA2C-3B87-4D4A-9F15-D631628F00E2}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='Track Totals'>
+      <viewpoints>
+        <viewpoint name='Bars - Artists by Track Count' />
+        <viewpoint name='Running Total - Liked Songs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{5795560A-2596-4145-84E6-7F03BA221210}' />
+    </window>
+    <window class='dashboard' name='Interactive - Track Totals'>
+      <viewpoints>
+        <viewpoint name='Artists by Track Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Track Listing'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F4DC3F42-0678-4D8A-BA4A-1E59652ED9E2}' />
+    </window>
+    <window class='dashboard' name='Heatmap and Explicit Tracks'>
+      <viewpoints>
+        <viewpoint name='Explicit Tracks'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Heatmap - Time Tracks Added'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6E00A16F-5A50-4B34-A7E9-4ECE21F3EBEE}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Artists by Track Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]' type='filter' />
+            <card param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[max:Calculation_508062374279319552:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2201653B-8688-4E58-B0AA-D120D5D7029B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Bars - Artists by Track Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[ctd:track_id (track_artists_output.csv):qk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CF3AA912-0FAC-43E5-8BDD-C869112B587F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Explicit Tracks'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_162692575083847682:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{377F9B81-BE31-476E-A8BE-8553E14D443D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Heatmap - Time Tracks Added'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15gk27a1nf043816zxtk30tngp8d].[usr:Calculation_366198983257526276:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[hr:added_at:ok]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[usr:Calculation_366198983257526276:qk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[yr:added_at:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E84035F4-F158-4010-8032-0A9FD6292C40}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Running Total - Liked Songs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[yr:added_at:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B2D388D3-7E2E-4B6A-BC23-F271AA793688}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Track Listing'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_508062374279319552:ok]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_820499598446182401:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:Calculation_820499598446297090:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:added_at:ok]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:album:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:explicit:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:is_local:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name (track_artists_output.csv):nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[none:name:nk]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[yr:Calculation_508062374279319552:ok]</field>
+            <field>[federated.15gk27a1nf043816zxtk30tngp8d].[yr:added_at:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F405159A-987D-41B9-BA2A-3E7F2089C9D6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Heatmap and Explicit Tracks' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAdbUlEQVR4nO2deXBc13Wnv/f69Yq1sRMgABIEQRIguMHcJMpW5NFuc2x5vEjyOFuVS45d
+      cU0lNVOZTGUyqYmTTFU8ySSRnRmrSvJYScmTOGNKlCVL1EKJmyhuEEgQXBr7vnY3en393p0/
+      YHJECc1F/XpB9/3+IYn3ePqw+X7v3nPPvecoQgiBRFKgqNl2QCLJJlIAkoJGCkBS0EgBSAoa
+      KQBJQSMFIEkBE5+vH4ChwaGkdy0sLKTwEXHOnT7NoTcOcXVwlOnp6Vv+lZnxYd4+9AYnTp1m
+      MZpIblqPoH1yzyQSk8HBIVpa1jI2Mkq1t5gPei9T17QOTfczMjFDc0srr//iJXbs+TRK3E8o
+      FCWhaKBobNm0lgu9lykqr6JEizM+G8RTWsmm9WtQrn2E6mDrjh0cOX6Mdc0NDA0NMtR/idmF
+      EJFoFEyTbbv24jt/Bt3mYVvnJqpWNVLlG6WxawexkSGGFsPU1tQw4PPhKCqnramKsz2XaGio
+      lyOAJDWmx4Y4deoUE7N+3jt+DFO18f7J99B1HdWMcv7SGOtaW9m0fi3zwRBdHS0sJly4RIhw
+      NIEhBN09HzA9O0t753YWJoYxBIwN+fANjX/s88ZGRxidmmXL1m3EwlHa651cvtzLqUtT9He/
+      z1zsxvvnxgZQSmop89gxDJOennOcOfcBO3buZFW1V44AktSoXb2Grq4uEvETVHs9TAaibN7c
+      Sb/vPOXeUrS4gmLE6b08gKqooCioqoqqqoyPDBI3FOx2O0KPcu7MKeKqE5sC9U0tN3yOqiy9
+      qxVVRVGXfq+qKigqjpJqVnmnqKzopPhXT7SiLo0hqs1JdZWX+fEP8MfA7rBTX+Xl5Mn3aVq9
+      CkVmgiW5QPeZE7R27MTjyOykRApAUtDIGEBS0EgBSAoaKQBJQSMFIMlpZsaHOXG6G9P8SKiq
+      BxkcmUvZvgyCJTnN6MAlLg/PU1Vdjk2B6ZFBVM1GJBrCFF76fFfYu3crbruTzZs77ti+zANI
+      chqn041ITBCPBIkaGjX1zYjoAhOmIBEzaGlpxms3mNNKPpF9OQJIVjyzMzN4K6tQlVvf+1Gk
+      ACQZJT78MzCi2XYDAFvFDjkFkmSWxOSbkAhm2w0AFGeVXAWSFDZSAJK0Eluc5/A7RwjFku/L
+      vxP0hMnh0xNcGvRbYk8KQJJWhgf7WVVTSv/orCX27JpKXaWb+mqPJfakACRppb5hNUMjM6yu
+      81pm066pFLmtCV9lECxJK57yGj772RpLba5t+GRr/sshRwBJQSNHAElGUewl5EriSVEdMhEm
+      ySyJmVMg9Gy7AYBa1CxHAElmiV9+BvRAtt0AwN7ydRkDSAobKQBJWjEScfr7By2xJYTg8nAA
+      PWHiG7VmO4UUgCTtDA0NWGYrGNYxTUEwbE0cIQUgSSt6NMzE+BgLoditb74FQoBvNEj/+CK9
+      A34CodRFIFeBJBklfOx3ZBAskeQKchlUklEUhxfU3HjsFJtLToEkmSUxfQLMeLbdAEAtaZEj
+      gCSzxK88J2MAiSRXkAKQpBU9FuLMmbNEdSNlW0IILg74iesGV0asGUWkACRpRVE1EqF55oKp
+      5wEAovElIYWjqQsKpAAkaWZ+zMfAbJQStz1lW0LA1ZEgvrFFegcWZCJMsvKQiTCJJIeQApAU
+      NHIKJMkoRvAyCGsC2FRRXDUyESbJLNHhv8+Z0oiOVV+RUyBJYSMFIEkrZiLO6Ng4poUz7bGp
+      EIZhjT0pAElaMfQYPaffY2IhYom9aCyBbzjA+Supt0cCKQBJmkkkEmg2hbgFWyEAFEUhGk1g
+      +yTdMJZBBsGStOJ0F9O19zOUlhVbY89hY+eWWkqKUs8sgxSAJM2omp3y8jJLbZaVOCyzJadA
+      koJGJsIkGSUR6AYzR0ojuhvlFEiSWeLj/4zIlURY3RekACSZRRghMELZdmMJU5cxgKSwkQKQ
+      pBVhJnjh+WfxR6zJA+i6yYFD/VwaWLDEnhSAJK1M9F8kEInjD1nTHFtPGLQ0lhKyqDaojAEk
+      aWXVus18raoeV7E1XR3dLg1TQHtrhSX2pAAkaaekzJqHFZa2QmzZUGmZPTkFkhQ0cgSQZBR7
+      xWcQpjXxQKqo7iYpAElmMeNTYFizNTpVhBGWApBkFmOxN2eORNqKN8kYQFLYSAFI0kp4bpRD
+      bx0hFEtYYi+uG/z89X76+uctsScFIEkrplAwYyEWI9YkrhIJk7WNpYQj1ghKxgCStKLaXZSW
+      luBy2Cyx53Zp2FSFjS3W5BbkeQBJRgld+P2cCYJlXSBJwSOnQJKMYq/6LBjW9ApIFdWzRgpA
+      klnMyDDCCGfbDQBUT7MUgCSzGKFLORMDiJJOGQNIChspAElaifinefvwMcK6Nev2hil45fAQ
+      w+PWjCJSAJK0Mj48wGIkyOyCNfP+cESnbU0ZcwvWBNJSAJK00rR+E5WlJZQWuSyxV+yxMzIZ
+      oqmhxBJ7eZsI+/A/S1GUG3527c+SzJNribC8XQX6+c9/TmVlJRs2bCAejzMyMoLf76euro6a
+      mhoWFha4ePEiq1atYs+ePdl2V5Il8lYAAKqqcuzYMeLxOG63m56eHtra2rhy5QpdXV0Eg0G2
+      bt2abTcLCpunNWfyAIrDm79ToPHxcQYGBmhra2NiYgKfz8fdd9+NaZokEgnC4TBer5fp6Wna
+      2tqy7W7BEJ96Bcx4tt0AwFbSkb8CgKU5vxACVVUxDOOGX2EpFpDxQGaRMUAGeeutt6ivr6el
+      pYUDBw7Q3t7OpUuXKCsrIxqN0tHRQWNjY7bdlGSRvF4G9fv99PX1oes6i4uLXLlyhVgsRm1t
+      LQ6Hg5dffjnbLuY94cAc7779JlN+aw7CCyE4fHKMOb81lSXyegS45557CIfD6LrO3r17qaur
+      w+fzsWHDBpqbm2lubs62i3mPp7QCVVUpK7YmD7AY1lldW8Tw2CIVZanbzGsBVFZWUlm5VEWs
+      rGypTc+2bdsA8Hg8rFu3Lmu+FQrCiOIpr8FpsybW8rjtXB6coGO9PBGWlLfffhu73Y7f72fj
+      xo04HA5qampQFAXTNNE0jUQiwejoKE1NTRiGgcNhXd8pSXJkEJwBIpEIhmHgcrkYGBggGo1S
+      XFyM2+3m8OHD1NbW0tbWxvnz59m2bRvHjx/nqaeeyrbbkiyQlwKora3F5XIxOzvLli1b8Pv9
+      BAIB2traiEQiVFVV4ff7efDBBwkEAmzZsiXbLhcMimJHKNa0OE0ZRc3PKdAnQZgmQtcx5hdI
+      TE0hwmHMaJSeqhii2EORo4iqomoqPFU4NAeqktcLaGnDCPYihDXNMlJFddXl5whwOwghMEMh
+      oh/0ELtwgVhfH4mJSUT8xizlP90dYazs/78jNFWjuriWtuoNbKrbzOZVW/G6K2RC7TaJDj8j
+      Y4BsYiZ0Yj0XWHz9ENEPPkDE7mxfecJMMB4YZTwwyttX30BVVLbUb+PutZ/hU027cWrWLPdJ
+      MkPBCEA3dI72H+bdk//CkwdmUYU1b2xTmJwdPc3Z0dNUFdXwSPt+PtP6Wdx2tyX2VzpmIkZv
+      n4+2jRuxW7AUKoSg5/IcbWvKcVpQbCvvJ7KmMOkZP8cfvPTv+Pujf8P5+Agf1KVnDjoTmuLH
+      J3/Efzjwu7zrewvTzI25bjaZnxjig3PnGJ+3pjVqJLp0tPLClTlL7OW1AELxRf7une/zZ6/9
+      MWP+kaUfKnCsOYEgfbH/TGiap9/9K/70tf/MVHAybZ+zEtATBh6PC8Ow5mVg11R8wwGKPNas
+      JOXtKtDVmcv8zeG/ZGpx4uMXBXz7qJNG/62H0P/xkSD4TilxlvLNu77DjtU7ZaBM7iXC8k4A
+      QgiODx7hh+/+NbqZvCLxljEbT5x13vhDTcNWVoatsgKb14vqdnOozWDCFmIhssBceIb5yDy6
+      cWf72VVF5cvbnmD/5i8VvAhyTQB5FQQLIXj14kH+9/vPcCtdn68zmHcLKpQiXJs7cG/bhnND
+      G7aqKhSH4/qD+pUP2dZNnfnwHFem++geO8O5sTMEov5b+mUKk5+eeZ5gLMDjO76BTc2rr/2O
+      UFQ3QrWmRErKqFr+jABCCF7r+wXPvvc/b+v+6uJafrPuUTZv3IfN673jN7MQgmAsyKnhE7zS
+      +xIjC0O3FVd8ruMLPL7j1wt2JEgEekBY0ysgVVRXQ/4I4MTgUf728F9i3CLLWOQo5vMdX+Rf
+      bXgIj6PIks+OJaIc6T/Mz869wFx49qb3Kig83vUNHm3/QkGKQE6B0sDQ/AA/PPLXt3z4O+q2
+      8Ft7nqKudBUK1j18Ts3Fr7Xez7aGLp5//1mOD76bdAomELxw+ic0lDWyffWnLPNB8slY8cug
+      ET3M377zfWKJ5BldVVF5tOML/P59f8iq0npLH/5rKIpChaeSb+37Lk92/QYOW/Lt1YYw+NGx
+      p5kL3Xy0yAf0WIieCxcxTGsmGkIIzl2cIWpRz7EVL4CfnvkHRhaGkl63qTYe3/HrPL7jGzg1
+      Z9L7rEJTNR7etJ9v3vWdm2aD5yNzPHPiB5immXafssnksI9LF85yZezWiwW3QziaQLOp9F6V
+      TfLwzV7h0KVXkl5XFZWvbv+3PNK+P6O7NxVFYe+ae/jtPb9z05Hg7Mgp3h8+kTG/skF1fTPl
+      peV4S63ZI+Ww27g67KekyJpE2IoVgGEa/MOp50iYyYfCBzc+yiOb9mcl2FwSwT6+uv3rKEnE
+      JxD84+kfE01Yc8A7F3F6SrnvgYeosUgAdk1l/31raW0ut8TeihXAxckL9E70JL2+oaadL29/
+      8noNoGygKAr3b3yEvWv2Jb1nMjjO8f53M+iV5MOsSAEIITjQ809J193ddje/vecpXDmwNVlT
+      NZ7s+g2qiqqT3nPwws/vOLsssYYVuQw65h/h/E3e/g9t+jwNZblT8Krc7eWxrV/lfx39u2VF
+      O+ofpnvsLF2Nu7LgXWZxNT8FOXIiTHHUrEwBvON7CzPJl1ju9vLgxs/lVJLpWlD8y4svMzDn
+      W/aeo/2HC2LDXHTwhzmVCFtxUyDTNDkxeDTp9fvWP0CJ05rmCVbi1Jw8tOlzSa+fGztDOG7N
+      nnnJ7bPiBDAeGGV6cfk99nabg30t9+bsW3TH6p143csXdArHQ/RN9WbYo3QiiITDmMLE7/ff
+      cnPinTDvj2FalFhbcQLom+rFFMsnj9qqN1JTUpthj26fIkcx2xq6kl6/MJk8rllxmAZH3ngT
+      35WLvH/yPQYmrUmERWMGpy9MF+6JsItTF5Je21K/PafLlSiKwtaG7UmvX56+aOmbMpsIFBx2
+      lVAogqZplr2xQWDXVKz6mlZcEHz9aONHUFDYVNeRYW/unJbK9bg017LJr+nFKXRDx6HlQ5lG
+      QevmzRSVeonHolRVWpO4cjk1Nqwtp7rCmqIDufu6XAbDNJgKLnPEEfA4PNSVrMqwR3dOmbuc
+      yqKqZa/5IwtE9NxoH5QqiqpR39BIWUkx1VVVlsZltVUeVNUaeytKAIuxIDFj+V2fZa5y3HZP
+      hj26czRVozJJUkwgmAlNZ9ijwmZFTYFiiVjS3ZNl7vIb3jLBYJBAIEB9ff31n8diMZzOj+8I
+      nZ+fJxgMsnr16hu2Tui6jqZp6LrO5OQkDQ0NH9taEY/HcTgcmKaJYRjY7TffpKUoCuVub9Lr
+      8TzPCDvrv4K4yVntTGLzrF1ZAogbMYwkK0AuzX3DPv+enh5UVcVutxOLxejv70fTtOtl0mOx
+      GFevXqWlpYXa2lq6u7vRdR3DMIhEIng8HsbHx2lvb2d+fp5z585dL7V+TVgTExNomkZtbS19
+      fX243W5M02TdunUsLi7idru5cuUKnZ2dlJaWXvftZtukI/H8mAIlQ59+HZFYzLYbS9Q+urIE
+      cFM+MiU0TZOJiQkURSEajTI+Pk5NTQ2hUIj5+XlKSkqorq5GCIHX66W5uZlAIICqqhw8eJDd
+      u3ejqiqDg4N4vV5mZmaYn5+ntbWVZ599lj179tDd3c1dd92FrutMT0/jdruJRqMIIVhcXKS8
+      vJzKykr8fv8NArgZ2dy8lwlMfS5nMsEY0ZUlAKfmwqaoyx59jOoRBOL6KHD33XdfvxYKhbDb
+      7TdtgtHZ2Xn998v1Dv5w/4Dvfe97AOzfv//6z7q6kq/vf5SInrxflkuTJRUzyYp63Tg1J6q6
+      fDErf2Qh6Rp6UVFRznSAEUKwEEl+msmqg/pZx0zwxi9eIRBa5Jevv2GZWT1h8uIbA1wdsiax
+      tqIEUOIspSjJA+KProwlxISZYDbJSo+malR4rOl9lXVUjSpvGZqzmNIi646ixnWD1qZSgovW
+      LBasKAEoikJtkrX+cDzMRHA8wx7dOf7IArOhmWWveT0VuPKkqrSZiBNXYHzIhykUFkJ3VoY+
+      GR6XRiRmsKEl+UranbCiYgCAJm8zfctshxAIeifO01rVlgWvbh/f7OWkRyDrSurR8qRqnKo5
+      +NTuvQCsa2mxzK6iKOzoSH646E5ZUSMAwKbazUmvdY+dSbpRLhcQQnBu9EzS6xtr2zPojQRW
+      4AiwvnoDmqotexj+0vRFpoKT1JXm5paIUHyRs6Onkl6/mbjzBa18N5i5UQRAddWvPAFUFlWx
+      tnIdl6f7PnZNN+K863uLL239Wk6eCTg9cpL5yPLbeKuKqllbWQCNu804wrQmHkgVIYyVJwCA
+      PWv2LSsAgDcu/5IHNj5Kqev2Ek+ZIpaI8UrvS0mv72zam5HCXdkmETiTM4kwm3vtyosBAHY3
+      35W04NRCZJ5XL76UU/vqhRAcG3iHwbn+Za8rinrT0imSGxmbCmEY1sR6K1IAFZ5K9q65J+n1
+      V3pfZNQ/nEGPbs5CZJ6fnXshaRmXTTUdtFS2ZtirNGMmOHTwZeb9Cxz6xUuMzFhz3jkaS9A/
+      HOD85QI9EXaNz3V8IemSYUSP8MzxH+ZExbWEmeD5U8/edJvz5zd/Mf/2AKka1ZVeTCOBWlRJ
+      jdea/IaiKISjCWw2a76vFfutN5Q3ctfaTye93jd1gf9z5vmsFp8VQvDaxZc5NpC88lt77VKz
+      7XzDTMTRbSozU9MUue3E4tbUAnI6bOzeWsum1gJNhH2Yr27/OqeH32Mxvvz22lcvHsTrqeTR
+      9n+d8VWhpXn/u7xw5ieIJLkJu2rn6zt/C1uS/U0rGVVz0LVzd1pslxZbt69rxY4AsLR14Mvb
+      n0x63RQmL5z5CS/3Hshoguxa0PvM8advesDlwU2fo9m7NmN+ST7Oim+RZAqTv3rrL25aZlxV
+      VB7etJ9/s+3xtC81JswEv7x4kJ+eef6mD39LZSv/6YH/isue/fqlmSQR6AaRG03yVNfqlS8A
+      gGA0wB/94t8zmeTA/DWut0gqWWX5lEgIwXxk7pYtkgCKnSX88UN/Rn3Zakt9WAmEz/0BQs+N
+      PICj8Uv5IQCA4flB/vS1P7pl29L0NMmLccT3Nj/rvnWTPIfNwe/d94d05mHgezuETv1uziTC
+      HE2P548AYKlnwF8c+hNit7H8WV1cywMbHmbv2nvwuisy0iZVU+18a993CzrpJQWQZvqmevnv
+      b/35bTWwhqUTWB11nWxr6KKtZhNVRVU4bM6PCSKVRtkADpuTb+37Lrua9ubkPiXLMRO89vKr
+      7Pz0Pk68/Rad+x6g3utOWQCGYfLKkRHu3l5LeUlq8Zyj6fGVvQy6HBtqNvEf7/8vfP/NP2Mq
+      SRHdDxOOhzg5dJyTQ8fRVI0ydzkVniq8bi9uhwcFhageYSEyz1x4lvnI/B03syhzlfOdT/8e
+      HXWdt745X1A1aqsqUG123G4HhmFNHiCeMAmE4vhGguzYlPqCRt4JAKDJu4Y/eeS/8aNjP+D9
+      4eO3/feWjivOJD2x9UnYVLuZb9717aQn2fIVMxHH0GzMTE9RVtNIbbk1RctcDhtb2ippqrMm
+      fsu7KdCHMU2TQ5df5adnnieUJFmWLtx2D4+07+fzHY/lSa1Pa8i1GCAvR4BrqKrK/RseZlfT
+      Xv7x9I852n/4pl0lLflMRaWrcRdf2f51GgpwmXOlkdcjwIcRQjAeGOPFnn/maP876BaX51MV
+      lV1Ne/n85sdorlib02Xas0l85P8iktR3zTSad3vhCOAaS8uXAd4bPMbbV9/AN3sl6V6dW6Eo
+      Ck3la7hr7T3sbr6b6uKawljhSYHYxacRidwoX6Ot+rXCE8CHMYXJYiy41HN4soeRhSGmF6eY
+      Xpz62Jq+wlJR2+riGhq9zWyoaWdjbTsV7oqkxbokHyd8/NugB7LtBgD2licLWwAfRQiBKUwS
+      ZoJYIkZEDyOEicvuwWV3oakaNsUm3/IpkGsCyOsg+E5RFAWbYsOm2nBqzpueK3766adpaWlh
+      zZo1OBwObDYbNpuNiooKnnvuOe6//37KyspYXFzEZrPR3d1Ne3v79eK53d3dPPbYY8uWa88L
+      zARHDh+h655Pc+T1g+y+92GKnamNlEII3j07SXuLl+MfTHHfznrcKdqUAviENDY20tvby8DA
+      AFW/6oAihGDdunWYpolpmjz33HOsW7eORCKBoigcPHiQe++9l4GBAZxO5y17CaxoVI0Sl4Mx
+      Xw+9viE2fCpKsTO1tXtFUaj2uhmfCbOzo5rp+QhNdcUp2ZQC+ITs2bOHbdu2oWkaCwsLVFUt
+      tT2qqKggFAohhOCJJ57g+PHj7Nq1C6fTiaqqjIyMsGvXLhYWFtB1PW9HADMRJxiNUFbcyhcf
+      fQhvcerbvk1TMDS5SEt9Cd2X57i3qy5lmzIGkGQUGQPkIUePHmVubo6mpiaGhoZ4+OGHefPN
+      NxFCEA6HKSkpQdd1Nm/eTENDQ7bdlXwIKQALWLduHRcvXmT9+vV4PEt7XsrLywmFQgQCASoq
+      KpiYmODQoUM88cQTaFrhfu1qSQskrCmRkiqKwyunQFYwNTVFKBS6PqcvLi7m6tWrtLa24vP5
+      2LJlC7quMzo6yvr16wt6GVWf+GXOlEa0lXZIAUgyS+jMd3NnM1zj11Z2VYhsIYTg+PHjhEIh
+      wuEwr732GuPj4xw4cIBTp05x4sQJIpEIweDH/6MHBgYy77AkKYU7GU0BRVFoaGjAMAw8Hg9V
+      VVWcP38en89HfX09/f39VFRUMDQ0RCAQQFEUJicnqaurw+VyMTY2xunTp3nssceor6/P9j8n
+      PZgJzp7pZn3bWs71XGLrji6KnNY8bi+/M8Tuzhoqy1NfWpUC+AQIIRgcHMTpdOJyuZienmbX
+      rl1s3LiRWCxGZ2cnjY2NBAIBOjs7mZmZoaGhAV3XqaurQ1EUdu7cmbc5AAAUG4oew78wx7w/
+      jGFaM9MWQmDXVBaCcSmAbKEoCvv27bte+uRai9Xy8vIb7rvWOrWmpuZjNtauze+CWKahMzkz
+      haOymnIPhGM6pe7UM9+GKXA5NUqKrMmiyyBYklFkECyR5BByCiTJKLaStpw5EKM4KqQAJJlF
+      9ayBHDkSqdjLpQAkmUUffzVnYgBFK5YxgKSwkQKQpAczwemT7xOJhDhx/CRh3ZpyNEIIjnVP
+      shC0ZholBSBJD6qGZuj4Ll1gJrhINGqNACJRg6HxRRbD1tiTApCkBTMRZ2puBtVVQpFNELNo
+      BHA5bdRWuIla1HNMJsIkGSXXSiPKEUBS0MhlUElGUVQHQs2RYsGKTU6BJJnFmO/JmSZ5iqdB
+      jgCSzBLr+0FOVYWQMYCkoJECkKQHIRgdHibon+Pke+/hD99ZW6nlTQoGxhYxDMGZvtmbtqK9
+      XaQAJGnCZODSJWxFFahGDEW15lGbXohyachPscfO2EwkZXtSAJK0YBoGszNTTEyOETadlLpS
+      DzeFgP6xIMGwzgXfAsXu1G3KVSBJRsm10ohyBJAUNFIAkoJGToEkGcVY6APTmo1sqaJ6amUi
+      TJJZjNf/HGL+bLuxRNdvyimQpLCRApCkCUEsGkUIk2Bw0ZKkFYA/rJMwTPxhXSbCJDmMaXD4
+      tdcZGbzKiy++yPBM6j0BTFPQNxbkX06Ocahniplg6tllKQBJWhCoFHmcBEIh3C4nCSP1wFcA
+      /ojOfR3VltUalUGwJD0Ik4Z1rRSXeSkvr6GuJnnL2dtFARorPJgCdrdWUFWS+rkCKQBJWlBs
+      Gs1rflUA2Ft+85tvE1VV2NhQYomt6zYttSaRrDD+H8eRLHx2RXudAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Interactive - Track Totals' width='192'>
+      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
+      T8fU+f8jgEFIbCJEYwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Track Totals' width='192'>
+      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
+      n5U5u73Ox/gAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
