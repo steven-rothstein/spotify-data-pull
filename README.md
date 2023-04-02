@@ -1,4 +1,4 @@
-# spotify-data-pull
+# Spotify API Proof of Concept
 
 https://public.flourish.studio/visualisation/12584673/
 
